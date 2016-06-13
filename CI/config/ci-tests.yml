@@ -59,20 +59,21 @@ pkgs:
       - libice6
 
 
-  oce-pythonocc:
-    any:
-      command: git clone https://github.com/tpaviot/oce.git &&
-      	       git clone https://github.com/tpaviot/pythonocc-core.git &&
-               mkdir build &&
-               cd build &&
-	       mkdir oce-last pythonocc &&
-	       cd oce-last &&
-               cmake ../../oce -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release &&
-               make -j 2 &&
-               make install &&
-	       cd ../pythonocc &&
-	       cmake ../../pythonocc-core -DCMAKE_BUILD_TYPE=Release &&
-	       make -j 2 &&
-	       make install &&
-	       cd &&
-	       python -c 'import OCC'
+#  oce-pythonocc:
+#    any:
+#      command:
+#git clone https://github.com/tpaviot/oce.git &&
+#      	       git clone https://github.com/tpaviot/pythonocc-core.git &&
+#               mkdir build &&
+#               cd build &&
+#	       mkdir oce-last pythonocc &&#
+#	       cd oce-last &&
+#               cmake ../../oce -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release &&
+#               make -j 2 &&
+#               make install &&
+#	       cd ../pythonocc &&
+#	       cmake ../../pythonocc-core -DCMAKE_BUILD_TYPE=Release &&
+#	       make -j 2 &&
+#	       make install &&
+#	       cd &&
+#	       python -c 'import OCC'
