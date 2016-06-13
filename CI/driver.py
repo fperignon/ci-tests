@@ -66,6 +66,7 @@ if tasks is None:
         tasks = [citests_default]
 
 return_code = 0
+print "HELLLLO", tasks
 for task in tasks:
 
     return_code += task.run(targets_override=targets_override)
