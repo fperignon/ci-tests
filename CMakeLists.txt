@@ -33,24 +33,6 @@ get_uninitialized_vars(CMAKE_ARGS_FROM_CACHE)
 set(PROJECT_NAME testci)
 set(PROJECT_NAME_CAP testci)
 
-if(USER_OPTIONS_FILE)
-  get_filename_component(input_file ${USER_OPTIONS_FILE} NAME)
-  get_filename_component(path_to_file ${USER_OPTIONS_FILE} PATH)
-  find_file(filefound NAMES ${input_file}
-    PATHS ${path_to_file} ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}
-    )
-  if(NOT ${filefound}-NOTFOUND)
-    configure_file(${path_to_file}/${input_file} ${CMAKE_SOURCE_DIR}/${input_file})
-  else()
-    message(FATAL_ERROR "Cannot find file ${USER_OPTIONS_FILE}")
-  endif()
-  message("\n !!!!! Load user-defined options set from file ${filefound} !!!!! \n")
-  include(${input_file})
-  # copy user file to binary dir, just for 'visual' check.
-  configure_file(${input_file} ${input_file} COPYONLY)
-else()
-  include(default_options)
-endif()
 
 # Configurations used for continuous integration
 if(CI_CONFIG)

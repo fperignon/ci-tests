@@ -3,7 +3,7 @@
 import sys
 from socket import gethostname
 
-from tasks import siconos_default, known_tasks
+from tasks import citests_default, known_tasks
 from subprocess import check_output, check_call
 
 from getopt import gnu_getopt, GetoptError
@@ -63,7 +63,7 @@ if tasks is None:
     if hostname in known_tasks:
         tasks = known_tasks[hostname]
     else:
-        tasks = [siconos_default]
+        tasks = [citests_default]
 
 return_code = 0
 for task in tasks:
