@@ -21,6 +21,16 @@ updater:
     fedora:  dnf --setopt=deltarpm=false install -y dnf-plugins-core && dnf -y copr enable xhub/siconos-git
 
 ##############################################################################
+env:
+  clang:
+    any:
+      - CC=/usr/bin/clang
+      - CXX=/usr/bin/clang++
+      - OMPI_CC=/usr/bin/clang
+      - OMPI_CXX=/usr/bin/clang++
+
+
+##############################################################################
 pkgs:
 
   build-base:

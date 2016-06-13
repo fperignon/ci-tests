@@ -30,8 +30,8 @@ endmacro()
 get_uninitialized_vars(CMAKE_ARGS_FROM_CACHE)
 
 # cmake project name
-set(PROJECT_NAME testci)
-set(PROJECT_NAME_CAP testci)
+set(PROJECT_NAME ci-tests)
+set(PROJECT_NAME_CAP ci-tests)
 
 
 # Configurations used for continuous integration
