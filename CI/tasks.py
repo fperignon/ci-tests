@@ -3,7 +3,7 @@ from machinery.ci_task import CiTask
 siconos_default = CiTask(
     ci_config='default',
     distrib='ubuntu:14.04',
-    #pkgs=['build-base', 'gcc', 'gfortran', 'gnu-c++', 'atlas-lapack', 'lpsolve', 'python-env'],
+    pkgs=['build-base', 'gcc', 'gfortran', 'gnu-c++', 'atlas-lapack', 'lpsolve', 'python-env'],
     srcs=['.'],
     targets={'.': ['docker-build', 'docker-ctest']})
 
