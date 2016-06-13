@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - CI/before_install.sh
+
+before_script:
+  - mkdir -p build
+  - cd build
+
+script:
+  - ../CI/driver.py
