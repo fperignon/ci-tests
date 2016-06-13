@@ -5,9 +5,17 @@ citests_default = CiTask(
     distrib='debian:latest',
     pkgs=['build-base', 'gcc', 'python-env'],
     srcs=['.'],
-    #targets={'.': ['docker-build', 'docker-ctest']}
+    targets={'.': ['docker-build', 'docker-ctest']}
     )
 # dispatch based on hostname and distrib type (to min. disk requirement)
+
+
+debian_oce = citests_default.copy()(
+    #ci_config='with_mechanisms',
+    add_pkgs=['wget', 'bash', 'bullet', 'h5py', 'oce-pythonocc-deps'],
+    #with_examples=True,
+    distrib='debian:latest')
+
 
 known_tasks = {'citests---vm0':
                (citests_default,)}
