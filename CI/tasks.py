@@ -7,11 +7,11 @@ siconos_default = CiTask(
     srcs=['.'],
     targets={'.': ['docker-build', 'docker-ctest']})
 
-siconos_debian_mechanisms = siconos_default.copy()(
-    ci_config='with_mechanisms',
-    add_pkgs=['wget', 'bash', 'bullet', 'h5py', 'oce-pythonocc-deps'],
-    #with_examples=True,
-    distrib='debian:latest')
+# siconos_debian_mechanisms = siconos_default.copy()(
+#     ci_config='with_mechanisms',
+#     add_pkgs=['wget', 'bash', 'bullet', 'h5py', 'oce-pythonocc-deps'],
+#     #with_examples=True,
+#     distrib='debian:latest')
 
 
 # dispatch based on hostname and distrib type (to min. disk requirement)
