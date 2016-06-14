@@ -228,7 +228,7 @@ pkgs:
   oce-pythonocc:
     any:
       command: git clone https://github.com/tpaviot/oce.git &&
-      	       git clone https://github.com/tpaviot/pythonocc-core.git &&
+               git clone https://github.com/tpaviot/pythonocc-core.git &&
                mkdir build &&
                cd build &&
 	       mkdir oce-last pythonocc &&
