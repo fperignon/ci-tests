@@ -5,7 +5,7 @@ citests_default = CiTask(
     distrib='ubuntu:14.04',
     pkgs=['build-base', 'gcc', 'python-env'],
     srcs=['.'],
-    targets={'.': ['docker-build', 'docker-ctest']}
+    targets={'.': ['docker-build']}
     )
 # dispatch based on hostname and distrib type (to min. disk requirement)
 
