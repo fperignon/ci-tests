@@ -224,6 +224,7 @@ pkgs:
       - libgl1-mesa-dev
       - libglu1-mesa-dev
       - libglapi-mesa
+      - libfreetype6-dev
 
 
   oce-pythonocc:
