@@ -2,7 +2,7 @@ from machinery.ci_task import CiTask
 
 citests_default = CiTask(
     ci_config='default',
-    distrib='debian:latest',
+    distrib='ubuntu:14.04',
     pkgs=['build-base', 'gcc', 'python-env'],
     srcs=['.'],
     targets={'.': ['docker-build', 'docker-ctest']}
