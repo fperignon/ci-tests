@@ -41,7 +41,7 @@ def get_entry(spec=None, distrib=None, distrib_version=None, pkg=None,
     """
 
     distrib_full = '{0}-{1}'.format(distrib, distrib_version)
-    print spec
+
     if pkg in spec[section]:
 
         if distrib_full in spec[section][pkg]:
@@ -201,9 +201,10 @@ for o, a in opts:
         output_mode = OutputMode.Vagrant
     elif o == '--split':
         split = a.lower() in ['true', 'yes', '1']
-        
+
+
 specfilename = args[0]
-print specfilename
+
 with open(specfilename) as specfile:
 
     spec = yaml.load(specfile.read())
@@ -219,6 +220,7 @@ with open(specfilename) as specfile:
     definitions = list()
 
     for pkg in pkgs:
+
         definition = get_entry(spec, distrib, distrib_version, pkg, 'env')
 
         if definition is not None:

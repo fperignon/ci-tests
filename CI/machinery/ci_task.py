@@ -97,7 +97,7 @@ class CiTask():
 
             if targets_override is not None:
                 self._targets[src] = targets_override
-        
+
             bdir = self.build_dir(src)
 
             if os.path.exists(bdir):
@@ -142,9 +142,9 @@ class CiTask():
                     ['cmake'] + cmake_args + [os.path.join('..', '..', src)],
                     cwd=bdir)
 
-            #     for target in self._targets[src]:
+                for target in self._targets[src]:
 
-            #         check_call(['make'] + ['-ki'] + [target], cwd=bdir)
+                    check_call(['make'] + ['-ki'] + [target], cwd=bdir)
 
             except CalledProcessError as error:
                 return_code = 1
