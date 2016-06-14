@@ -3,7 +3,7 @@ from machinery.ci_task import CiTask
 citests_default = CiTask(
     ci_config='default',
     distrib='ubuntu:14.04',
-    pkgs=['build-base', 'gcc', 'python-env'],
+    pkgs=['build-base', 'gcc', 'python-env', 'oce-pythonocc-deps', 'oce-pythonocc'],
     srcs=['.'],
     targets={'.': ['docker-build']}
     )
