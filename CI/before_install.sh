@@ -9,4 +9,5 @@ if test "$TRAVIS" = true; then
 #    sudo apt-get purge cmake -qq
     sudo apt-get -y install make
     sudo free -m
+    cmake --version
 fi
