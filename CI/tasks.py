@@ -25,4 +25,4 @@ citests_default = default
 # 4. dispatch based on hostname and distrib type (to min. disk requirement)
 #
 known_tasks = {'siconos---vm0':
-               ci_tests_default,)}
+               (citests_default,)}
