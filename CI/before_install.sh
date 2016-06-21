@@ -11,4 +11,10 @@ if test "$TRAVIS" = true; then
     sudo free -m
     echo "test cmake version"
     cmake --version
+    wget http://www.cmake.org/files/v3.0/cmake-3.0.2.tar.gz
+    tar xf cmake-3.0.2.tar.gz
+    cd cmake-3.0.2
+    ./configure
+    make install
+
 fi
