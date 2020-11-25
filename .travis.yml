@@ -1,10 +1,11 @@
-sudo: required
-
 services:
   - docker
 
+language: python
+
 before_install:
-  - CI/before_install.sh
+- docker pull debian:buster
+ 
 
 before_script:
   - mkdir -p build
@@ -14,4 +15,5 @@ script:
   - pwd
   - env
   - ls
-  - ../CI/test.py
+  - uname -a
+  - cat /etc/debian_version
