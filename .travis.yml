@@ -4,7 +4,7 @@ services:
 language: python
 
 before_install:
-- docker pull debian:buster
+- docker run -ti debian:buster /bin/bash
  
 
 before_script:
